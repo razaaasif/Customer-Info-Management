@@ -21,10 +21,17 @@ public class Customer {
 	@Column
 	private String email;
 	@Column
-	private Integer Number;
+	private String number;
 
 	public Customer() {
 		// TODO Auto-generated constructor stub
+	}
+
+	public Customer(String firstName, String lastName, String email, String number) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.number = number;
 	}
 
 	public int getId() {
@@ -51,12 +58,12 @@ public class Customer {
 		this.email = email;
 	}
 
-	public Integer getNumber() {
-		return Number;
+	public String getNumber() {
+		return this.number;
 	}
 
-	public void setNumber(Integer number) {
-		Number = number;
+	public void setNumber(String number) {
+		this.number = number;
 	}
 
 	public String getFirstName() {
@@ -79,7 +86,7 @@ public class Customer {
 		builder.append(", email=");
 		builder.append(email);
 		builder.append(", Number=");
-		builder.append(Number);
+		builder.append(number);
 		builder.append("]");
 		return builder.toString();
 	}

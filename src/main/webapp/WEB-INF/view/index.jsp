@@ -1,4 +1,4 @@
 
 <h2>Customer Information Management - CIM</h2>
 customer
-<a href="cutomer/list">Customer List Page</a>
+<a href="customer/list">Customer List Page</a>
