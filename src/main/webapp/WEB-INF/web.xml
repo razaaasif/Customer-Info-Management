@@ -4,10 +4,12 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	id="WebApp_ID" version="3.1">
 
-	<display-name>customer-info-management</display-name>
+	<display-name>customer-information-management-system</display-name>
 
 	<absolute-ordering />
-
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
 	<!-- Spring MVC Configs -->
 
 	<!-- Step 1: Configure Spring MVC Dispatcher Servlet -->
@@ -26,5 +28,5 @@
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
-	
+
 </web-app>
