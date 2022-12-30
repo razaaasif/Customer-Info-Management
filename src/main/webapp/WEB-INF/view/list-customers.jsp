@@ -16,6 +16,10 @@
 				<h2>Customer Information Management System - CIMS</h2>
 			</div>
 		</div>
+
+		<input type="button" class="add-button" value="Add Customer"
+			onClick="window.location.href='showFormForAdd';return false" />
+
 		<div id="container">
 			<div id="content">
 				<div class="outer-wrapper">
