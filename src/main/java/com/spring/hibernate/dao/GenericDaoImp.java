@@ -19,7 +19,7 @@ public class GenericDaoImp implements GenericDao {
 	private Session getCurrentSession() {
 		return this.sessionFactory.getCurrentSession();
 	}
-	
+
 	@Override
 	@Transactional
 	public <T> List<T> loadAll(Class<T> className) {
@@ -27,12 +27,15 @@ public class GenericDaoImp implements GenericDao {
 		List<T> output = new ArrayList<>();
 		System.out.println("loadAll() query call start");
 		Query<T> query = this.getCurrentSession().createQuery("from " + className.getSimpleName(), className);
-		System.out.println("loadAll() query call done");
-		System.out.println("loadAll() adding start");
 		output.addAll(query.getResultList());
-		System.out.println("loadAll() adding ends");
-		System.out.println("loadAll() ENDS");
 		return output;
+	}
+
+	@Override
+	@Transactional
+	public void persist(Object obj) {
+		this.getCurrentSession().persist(obj);
+		System.out.println(obj + "\npersist done!");
 	}
 
 }

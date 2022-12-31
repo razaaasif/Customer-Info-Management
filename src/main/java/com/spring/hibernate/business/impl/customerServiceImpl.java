@@ -17,9 +17,13 @@ public class customerServiceImpl implements CustomerService {
 	private GenericDao genericDao;
 
 	@Override
-	@Transactional
 	public List<Customer> getCustomers() {
 		System.out.println("getCustomers()");
 		return this.genericDao.loadAll(Customer.class);
+	}
+
+	@Override
+	public void persistCustomer(Customer theCustomer) {
+		this.genericDao.persist(theCustomer);
 	}
 }

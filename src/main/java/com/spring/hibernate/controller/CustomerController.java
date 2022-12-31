@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.spring.hibernate.business.interfaces.CustomerService;
@@ -25,8 +26,15 @@ public class CustomerController {
 
 	@GetMapping("/showFormForAdd")
 	public String addCustomer(Model theModel) {
-		
-		theModel.addAttribute("customer", this.customerService.getCustomers().get(0));
+
+		theModel.addAttribute("customer", new Customer());
 		return "add-customer";
+	}
+
+	@PostMapping("/persist")
+	public String persist(@ModelAttribute("customer") Customer theCustomer) {
+		System.out.println("Saving Customer : " + theCustomer);
+		this.customerService.persistCustomer(theCustomer);
+		return "redirect:/";
 	}
 }

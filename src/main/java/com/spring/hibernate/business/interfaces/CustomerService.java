@@ -6,4 +6,5 @@ import com.spring.hibernate.entity.Customer;
 
 public interface CustomerService {
 	public List<Customer> getCustomers();
+	public void persistCustomer(Customer theCustomer);
 }

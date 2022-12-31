@@ -4,4 +4,6 @@ import java.util.List;
 
 public interface GenericDao {
 	public <T> List<T> loadAll(Class<T> className);
+
+	public void persist(Object obj);
 }

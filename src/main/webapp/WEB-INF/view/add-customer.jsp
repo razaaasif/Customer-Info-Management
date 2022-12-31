@@ -13,7 +13,7 @@
 
 	<div class="add-form">
 		<h1>Add New Customer</h1>
-		<form:form action="processForm" modelAttribute="customer"
+		<form:form action="persist" modelAttribute="customer"
 			method="POST">
 			<table>
 				<tbody>
