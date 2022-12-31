@@ -33,10 +33,10 @@
 		class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
 
-		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="driverClass" value="org.postgresql.Driver" />
 		<property name="jdbcUrl"
-			value="jdbc:mysql://localhost:3306/spring_learning?useSSL=false" />
-		<property name="user" value="root" />
+			value="jdbc:postgresql://localhost:5432/spring_learning?useSSL=false" />
+		<property name="user" value="postgres" />
 		<property name="password" value="root" />
 		<property name="minPoolSize" value="5" />
 		<property name="maxPoolSize" value="20" />
@@ -52,7 +52,8 @@
 		<property name="hibernateProperties">
 			<props>
 
-				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect
+				</prop>
 				<prop key="hibernate.show_sql">true</prop>
 				<prop key="hibernate.hbm2ddl.auto">create</prop>
 			</props>
@@ -73,7 +74,7 @@
 	<!-- Add support for reading web resources: css, images, js, etc ... -->
 	<mvc:resources location="/resources/"
 		mapping="/resources/**"></mvc:resources>
-		
+
 </beans>
 
 
