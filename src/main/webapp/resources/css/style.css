@@ -71,7 +71,7 @@ tr:nth-child(odd) {
 }
 
 .table-wrapper {
-	max-height: 66.4vh;
+	max-height: 60.4vh;
 	overflow-y: scroll;
 	overflow-y: scroll;
 	height: fit-content;
@@ -102,17 +102,16 @@ table td {
 }
 
 #footer {
-	color: #959595;
-	background-color: #D9D9D9;
-	font-weight: normal;
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	width: 100%;
+	color: #959595;
+	background-color: #D9D9D9;
+	text-align: center;
 }
 
 #footer p {
-	text-align: center;
 	padding: 15px 15px 15px 15px;
 }
 
@@ -121,12 +120,14 @@ table td {
 	color: #FFFFFF;
 	border: 1px transparent solid;
 	width: 140px;
-	margin: 10px auto 10px 0;
+	margin: 20px auto 0px 0px;
 	padding: 12px;
 	font-size: 16px;
 	font-weight: bold;
 	border-radius: 8px;
 	box-shadow: 1px 1px 5px #8dd3ba;
+	/* 	margin-top: 18px;
+	margin-bottom: 0px; */
 }
 
 .add-button:hover {
@@ -134,6 +135,11 @@ table td {
 	color: #fff;
 	background-color: #09bd7c;
 	border-color: #6bd3ae;
+}
+
+.total-customer {
+	color: cadetblue;
+	margin-top: revert;
 }
 
 /* .add-button:active {
