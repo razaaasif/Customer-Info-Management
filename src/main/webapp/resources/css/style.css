@@ -146,3 +146,7 @@ table td {
 	background-color: #2AC08A;
 	border: 1px #6fcdab solid;
 } */
+#actions {
+	text-decoration: none;
+	visibility: hidden;
+}

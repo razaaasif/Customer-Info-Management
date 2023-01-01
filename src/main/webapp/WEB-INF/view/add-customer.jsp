@@ -13,8 +13,9 @@
 
 	<div class="add-form">
 		<h1>Add New Customer</h1>
-		<form:form action="persist" modelAttribute="customer"
-			method="POST">
+		<form:form action="persist" modelAttribute="customer" method="POST">
+			<!--  need to associate this data with customer id -->
+			<form:hidden path="id" />
 			<table>
 				<tbody>
 					<tr>

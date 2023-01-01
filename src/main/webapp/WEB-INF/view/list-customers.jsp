@@ -41,12 +41,20 @@
 							<!-- loop over and print on html -->
 							<tbody>
 								<c:forEach var="customer" items="${customers }">
+									<c:url var="update" value="/updateForm">
+										<c:param name="customerId" value="${customer.id }" />
+									</c:url>
+									<c:url var="delete" value="/delete">
+										<c:param name="customerId" value="${customer.id }" />
+									</c:url>
 									<tr id="tr-content">
 										<td>${customer.firstName}</td>
 										<td>${customer.lastName}</td>
 										<td>${customer.email}</td>
 										<td>${customer.number}</td>
-										<td>Update | Delete</td>
+										<td><a class="actions" href="${update}">Update</a> | <a
+											class="actions" href="${delete}"
+											onClick="if (!(confirm ('Are you sure you want to delete this customer ?'))) return false">Delete</a></td>
 									</tr>
 								</c:forEach>
 							</tbody>
