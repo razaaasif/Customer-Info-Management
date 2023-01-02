@@ -11,42 +11,27 @@
 <body>
 
 
-	<div class="add-form">
+
+
+
+	<div class="container">
 		<h1>Add New Customer</h1>
 		<form:form action="persist" modelAttribute="customer" method="POST">
 			<!--  need to associate this data with customer id -->
 			<form:hidden path="id" />
-			<table>
-				<tbody>
-					<tr>
-						<td><label>First Name</label></td>
-						<td><form:input path="firstName" /></td>
+			<label>First Name</label>
+			<form:input path="firstName" id="fname" />
 
-					</tr>
-					<tr>
+			<label for="lname">Last Name</label>
+			<form:input path="firstName" id="lname" />
 
-						<td><label>Last Name</label></td>
-						<td><form:input path="lastName" /></td>
+			<label>Email</label>
+			<form:input path="email" id="fname" />
 
-					</tr>
-					<tr>
-						<td><label>Email</label></td>
-						<td><form:input path="email" /></td>
-					</tr>
-
-					<tr>
-						<td><label>Mobile No.</label></td>
-						<td><form:input path="number" /></td>
-					</tr>
-
-					<tr>
-						<td><label></label></td>
-						<td><input type="submit" value="Save" class="save" /></td>
-					</tr>
-				</tbody>
-			</table>
+			<label>Number</label>
+			<form:input path="number" id="fname" />
+			<input type="submit" value="Submit">
 		</form:form>
-
 	</div>
 
 </body>

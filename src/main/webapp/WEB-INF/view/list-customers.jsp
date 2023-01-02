@@ -6,6 +6,8 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link type="text/css" rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/style.css" />
 <title>CIMS</title>
@@ -20,8 +22,12 @@
 
 		<input type="button" class="add-button" value="Add Customer"
 			onClick="window.location.href='showFormForAdd';return false" />
+
 		<h3 class="total-customer">Total Customers
 			(${fn:length(customers)})</h3>
+
+
+
 		<div id="container">
 			<div id="content">
 				<div class="outer-wrapper">
