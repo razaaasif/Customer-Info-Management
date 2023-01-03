@@ -23,7 +23,7 @@
 			<form:input path="firstName" id="fname" />
 
 			<label for="lname">Last Name</label>
-			<form:input path="firstName" id="lname" />
+			<form:input path="lastName" id="lname" />
 
 			<label>Email</label>
 			<form:input path="email" id="fname" />
